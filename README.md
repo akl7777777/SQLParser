@@ -7,9 +7,9 @@
 
 下载地址:
 
-Windows 
+Windows https://github.com/akl7777777/SQLParser/releases/download/v1.0.2/akl-sql-parser.Setup.1.0.2.exe
 
-MacOS 
+MacOS https://github.com/akl7777777/SQLParser/releases/download/v1.0.2/akl-sql-parser-1.0.2.dmg
 
 使用效果如图
 
