@@ -13,4 +13,5 @@ MacOS https://github.com/akl7777777/SQLParser/releases/download/v1.0.2/akl-sql-p
 
 使用效果如图
 
-<img width="472" alt="image" src="https://user-images.githubusercontent.com/84266551/224704808-388de978-d7d8-40a5-8af1-d77bd4fbe800.png">
+
+<img width="836" alt="image" src="https://user-images.githubusercontent.com/84266551/224863547-4e25922a-8495-4f44-8ea3-ba291d11a46e.png">
