@@ -1,0 +1,43 @@
+{
+  "name": "akl-sql-parser",
+  "version": "1.0.2",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "publish:win:setup": "electron-builder -w=nsis --x64 -p always",
+    "publish:mac:dmg": "electron-builder -m=dmg -p always",
+    "publish:linux:deb": "electron-builder -l=deb --x64 -p always"
+  },
+  "build":{
+    "appId": "com.akl.sql.parser",
+    "mac": {
+      "icon": "sql.png",
+      "target": "dmg"
+    },
+    "win": {
+      "icon": "sql.png",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "sql.png",
+      "target": "deb"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "akl7777777",
+    "email": "akl7777777@163.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron": "^23.1.3",
+    "electron-compile": "^6.4.4",
+    "electron-builder": "^23.6.0",
+    "electron-prebuilt-compile": "^8.2.0"
+  },
+  "dependencies": {}
+}

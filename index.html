@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SQL解析工具</title>
+  </head>
+  <body>
+    <h1>SQL解析工具</h1>
+    <div>
+      <h5>版本更新,问题反馈请去<a id="homepage" href="javascript:void(0)">官网</a>;喜欢本软件也可以<a id="donate" href="javascript:void(0)">赞助一下</a>; by akl7777777</h5>
+      <img src="02头像02.png" alt="小芍同学" width="30" height="30">
+    </div>
+    <textarea id="sql-input" style="height: 300px;width: 200px"></textarea>
+    <button id="parse-btn">解析SQL语句</button>
+    <!--<textarea id="params-input"></textarea>
+    <button id="build-btn">拼装参数</button>-->
+    <textarea id="params-output" style="height: 300px;width: 200px"></textarea>
+
+    <script>
+      const { ipcRenderer } = require('electron');
+
+      document.querySelector('#parse-btn').addEventListener('click', event => {
+        const sql = document.querySelector('#sql-input').value;
+        console.warn(sql)
+        ipcRenderer.send('parse-sql', sql);
+      })
+
+      ipcRenderer.on('parsed-sql', (event, params) => {
+        // $('#params-input').val(JSON.stringify(params));
+        console.warn('****' + params)
+        document.querySelector('#params-output').value = params;
+      });
+
+      document.querySelector('#homepage').addEventListener('click', event => {
+        event.preventDefault()
+        ipcRenderer.send('homepage')
+      })
+
+      document.querySelector('#donate').addEventListener('click', event => {
+        event.preventDefault()
+        ipcRenderer.send('donate')
+      })
+    </script>
+  </body>
+</html>
